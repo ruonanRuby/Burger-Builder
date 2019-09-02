@@ -20,9 +20,9 @@ const burger = (props) => {
             <BurgerIngredient type = "bread-top" />
             {AddedIngredients}
             <BurgerIngredient type = "bread-bottom" />
-        </div>
+        </div> 
     );
 
 };
 
-export default burger;
+export default burger; 
