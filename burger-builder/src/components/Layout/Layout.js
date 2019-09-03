@@ -2,13 +2,16 @@ import React from 'react';
 
 import Hoc from '../../hoc/Hoc';
 import './Layout.css';
+import Toolbar from '../Navigation/Toolbar/Toolbar';
+import SideDrawer from '../Navigation/Sidedrawer/SideDrawer';
 
-const layout = ( props ) => (
+const layout = (props) => (
     <Hoc>
-    <div>Toobar, SideDrawer,Backdrop</div>
-    <main className = "Content">
-        {props.children}
-    </main>
+        <Toolbar />
+        <SideDrawer />
+        <main className="Content">
+            {props.children}
+        </main>
     </Hoc>
 );
 

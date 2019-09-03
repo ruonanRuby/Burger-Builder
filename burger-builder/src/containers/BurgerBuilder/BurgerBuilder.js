@@ -25,6 +25,7 @@ class BurgerBuilder extends Component {
             },
             totalPrice: 6.5,
             purchasable: true,
+            purchased: false,
         };
     }
 
@@ -35,8 +36,8 @@ class BurgerBuilder extends Component {
             })
             .reduce((sum, el) => {
                 return sum + el;
-            },0);
-        this.setState({purchasable: sum > 0});
+            }, 0);
+        this.setState({ purchasable: sum > 0 });
 
     }
 
@@ -71,6 +72,18 @@ class BurgerBuilder extends Component {
         this.updatePurchaseState(updatedIngredient);
     }
 
+    purchasedHandler = () => {
+        this.setState({ purchased: true });
+    }
+
+    purchasedCancelHandler = () => {
+        this.setState({ purchased: false });
+    }
+
+    purchasedCountinueHandler = () => {
+        alert('cOUNTINUE');
+    }
+
     render() {
         const disabledInfo = {
             ...this.state.ingredients
@@ -80,14 +93,19 @@ class BurgerBuilder extends Component {
         }
         return (
             <Hoc>
-                <Modal> <OrderSummary  ingredients = {this.state.ingredients}/> </Modal>
+                <Modal show={this.state.purchased} modalClosed={this.purchasedCancelHandler}>
+                    <OrderSummary ingredients={this.state.ingredients} 
+                        price = {this.state.totalPrice}
+                        purchaseCancel = {this.purchasedCancelHandler} 
+                        purchaseCountinue = {this.purchasedCountinueHandler}/> </Modal>
                 <Burger ingredients={this.state.ingredients} />
                 <BuildControls
                     ingredientAdded={this.addIngredientHandler}
                     ingredientRemoved={this.removeIngredientHandler}
                     disabled={disabledInfo}
-                    totalPrice={this.state.totalPrice} 
-                    purchasable={this.state.purchasable}/>
+                    totalPrice={this.state.totalPrice}
+                    purchasable={this.state.purchasable}
+                    ordered={this.purchasedHandler} />
             </Hoc>
         );
     }
