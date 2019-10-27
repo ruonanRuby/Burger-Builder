@@ -58,3 +58,10 @@
         transform: scale(1);
     }
 }
+
+@media (max-width: 500px) {
+    .container {
+        columns: 1 auto;
+    }
+}
+

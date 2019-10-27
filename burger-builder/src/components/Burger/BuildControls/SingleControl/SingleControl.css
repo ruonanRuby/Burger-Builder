@@ -19,7 +19,7 @@
 
 .SingleControl button:disabled {
     background-color: #AC9980;
-    border: 1px solid #7E7365;
+    border: 1px solid rgb(133, 127, 120);
     color: #ccc;
     cursor: default;
 }

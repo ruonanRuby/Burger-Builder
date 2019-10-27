@@ -1,10 +1,13 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './singleItem.css';
 
 const singleItem = (props) => (
     <li className = "item">
-        <a href = {props.link}
-            className = {props.active? "active": null}> {props.children} </a></li>
+        <NavLink
+            to={props.link} 
+            exact activeClassName = "active"> {props.children} </NavLink>
+    </li>
 )
 
 export default singleItem;

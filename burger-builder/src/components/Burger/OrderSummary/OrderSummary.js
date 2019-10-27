@@ -4,9 +4,6 @@ import Hoc from '../../../hoc/Hoc';
 import Button from '../../UI/Button/Button';
 
 class OrderSummary extends Component {
-    componentDidUpdate() {
-        console.log("order summary DID update");
-    };
 
     render() {
         const ingredientSummary = Object.keys(this.props.ingredients)
