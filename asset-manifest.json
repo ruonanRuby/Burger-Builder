@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Burger-Builder/static/css/main.229b0080.chunk.css",
+    "main.js": "/Burger-Builder/static/js/main.a7a69a83.chunk.js",
+    "main.js.map": "/Burger-Builder/static/js/main.a7a69a83.chunk.js.map",
+    "runtime~main.js": "/Burger-Builder/static/js/runtime~main.eb88f8aa.js",
+    "runtime~main.js.map": "/Burger-Builder/static/js/runtime~main.eb88f8aa.js.map",
+    "static/js/2.23a653ce.chunk.js": "/Burger-Builder/static/js/2.23a653ce.chunk.js",
+    "static/js/2.23a653ce.chunk.js.map": "/Burger-Builder/static/js/2.23a653ce.chunk.js.map",
+    "index.html": "/Burger-Builder/index.html",
+    "precache-manifest.7142ba691692b8b3673e1a3f8205f5f4.js": "/Burger-Builder/precache-manifest.7142ba691692b8b3673e1a3f8205f5f4.js",
+    "service-worker.js": "/Burger-Builder/service-worker.js",
+    "static/css/main.229b0080.chunk.css.map": "/Burger-Builder/static/css/main.229b0080.chunk.css.map"
+  }
+}
