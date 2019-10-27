@@ -6,7 +6,8 @@ const singleItem = (props) => (
     <li className = "item">
         <NavLink
             to={props.link} 
-            exact activeClassName = "active"> {props.children} </NavLink>
+            exact = {props.exact} 
+            activeClassName = "active"> {props.children} </NavLink>
     </li>
 )
 

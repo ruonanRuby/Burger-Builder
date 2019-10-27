@@ -4,7 +4,7 @@ import Item from './singleItem/singleItem';
 
 const navItem = () => (
     <ul className = "NavItems">
-       <Item link="/">Burger Builder</Item>
+       <Item link="/" exact>Burger Builder</Item>
        <Item link ="/orders">Orders</Item>
     </ul>
 );
