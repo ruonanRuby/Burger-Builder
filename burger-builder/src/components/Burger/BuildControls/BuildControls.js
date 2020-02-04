@@ -1,5 +1,5 @@
 import React from 'react';
-import './BuildControls.css';
+import classes from './BuildControls.module.css';
 import SingleControl from './SingleControl/SingleControl'
 
 const controls = [
@@ -12,9 +12,9 @@ const controls = [
 ];
 
 const buildControls = (props) => (
-    <div className = "BuildControls">
+    <div className = {classes.BuildControls}>
         <h3>Current Price: ${props.totalPrice.toFixed(2)}</h3>
-        <div className = "container">{controls.map(ctrl => (
+        <div className = {classes.container}>{controls.map(ctrl => (
             <SingleControl 
                 key = {ctrl.label} 
                 label = {ctrl.label} 
@@ -23,9 +23,9 @@ const buildControls = (props) => (
                 disabled = {props.disabled[ctrl.type]}
                 />
         ))}</div>
-        <button className = "OrderButton"
+        <button className = {classes.OrderButton}
                 disabled={!props.purchasable}
-                onClick = {props.ordered}>Order Now</button>
+                onClick = {props.ordered}>{props.isAuth ? 'Order Now' : 'SIGN UP TO ORDER'}</button>
     </div>
 );
 

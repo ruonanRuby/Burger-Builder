@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './singleItem.css';
+import classes from './singleItem.module.css';
 
 const singleItem = (props) => (
-    <li className = "item">
+    <li className = {classes.item}>
         <NavLink
             to={props.link} 
             exact = {props.exact} 
-            activeClassName = "active"> {props.children} </NavLink>
+            activeClassName = {classes.active}> {props.children} </NavLink>
     </li>
 )
 

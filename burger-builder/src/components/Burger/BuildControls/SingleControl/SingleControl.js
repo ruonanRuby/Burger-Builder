@@ -1,14 +1,14 @@
 import React from 'react';
-import './SingleControl.css';
+import classes from './SingleControl.module.css';
 
 const singleControl = (props) => (
-    <div className ="SingleControl">
-        <div className = "Label">{props.label} </div>
+    <div className = {classes.SingleControl}>
+        <div className = {classes.Label}>{props.label} </div>
         <button 
-            className = "More" 
+            className = {classes.More} 
             onClick = {props.added}>add</button>
         <button 
-            className = "Less"
+            className = {classes.Less}
             onClick = {props.removed}
             disabled = {props.disabled}>remove</button>
     </div>
